@@ -1,5 +1,9 @@
 package components;
+
 import javax.swing.*;
+
+import utils.ImageUtil;
+
 import java.awt.*;
 
 public class MenuItem {
@@ -33,4 +37,3 @@ public class MenuItem {
         return panel;
     }
 }
-
