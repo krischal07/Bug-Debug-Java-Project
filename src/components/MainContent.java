@@ -3,25 +3,35 @@ package components;
 import javax.swing.*;
 import java.awt.*;
 
-public class MainContent {
-    private JPanel panel;
-    private JLabel contentLabel;
+public class MainContent extends JPanel {
+    private CardLayout cardLayout;
+    private JPanel contentPanel;
 
     public MainContent() {
-        panel = new JPanel();
-        panel.setLayout(new BorderLayout());
-        panel.setBackground(Color.WHITE);
+        cardLayout = new CardLayout();
+        contentPanel = new JPanel(cardLayout);
+        setLayout(new BorderLayout());
+        add(contentPanel, BorderLayout.CENTER);
 
-        contentLabel = new JLabel("Welcome", JLabel.CENTER);
-        contentLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        panel.add(contentLabel, BorderLayout.CENTER);
+        // Default panel
+        JPanel defaultPanel = new JPanel();
+        defaultPanel.add(new JLabel("Select an option from the sidebar"));
+        contentPanel.add(defaultPanel, "default");
+
+        // Initialize and add QA panel
+        QAPanel qaPanel = new QAPanel();
+        contentPanel.add(qaPanel, "qa");
+
+        // Other panels can be added here similarly...
     }
 
-    public void updateContent(String content) {
-        contentLabel.setText(content);
+    public void showQAPanel() {
+        cardLayout.show(contentPanel, "qa");
     }
 
-    public JPanel getPanel() {
-        return panel;
+    public void showDefaultPanel() {
+        cardLayout.show(contentPanel, "default");
     }
+
+    // Add methods to show other panels if needed
 }
