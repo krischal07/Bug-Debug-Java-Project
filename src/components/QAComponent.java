@@ -2,98 +2,69 @@ package components;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.function.Consumer;
-import javax.imageio.ImageIO;
 
 public class QAComponent {
+    private JPanel mainPanel;
+    private JTextArea[] answerFields;
 
-    public JPanel createQAPanel(Consumer<String> teacherClickListener) {
-        JPanel qaPanel = new JPanel();
-        qaPanel.setLayout(new BoxLayout(qaPanel, BoxLayout.Y_AXIS));
-        qaPanel.add(new JLabel("Q&A Section", JLabel.CENTER));
+    public QAComponent() {
+        mainPanel = new JPanel();
+        mainPanel.setLayout(new BorderLayout());
 
-        JPanel teacherPanel = new JPanel();
-        teacherPanel.setLayout(new GridLayout(0, 3)); // 0 rows, 3 columns
-
-        // Create sample teacher panels
-        for (int i = 0; i < 6; i++) {
-            teacherPanel.add(createTeacherPanel("Teacher " + (i + 1), "/assets/user.png", teacherClickListener));
-        }
-
-        qaPanel.add(teacherPanel);
-
-        return qaPanel;
-    }
-
-    private JPanel createTeacherPanel(String teacherName, String photoPath, Consumer<String> teacherClickListener) {
-        JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-
-        // Resize the image to 100x100 pixels
-        ImageIcon photo = resizeImageIcon(photoPath, 100, 100);
-        JLabel photoLabel = new JLabel(photo);
-        photoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-
-        JLabel nameLabel = new JLabel(teacherName);
-        nameLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-
-        panel.add(photoLabel);
-        panel.add(Box.createRigidArea(new Dimension(0, 5))); // Add space between photo and name
-        panel.add(nameLabel);
-
-        // Add click listener for photo and name
-        MouseAdapter clickListener = new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                teacherClickListener.accept(teacherName);
-            }
-        };
-        photoLabel.addMouseListener(clickListener);
-        nameLabel.addMouseListener(clickListener);
-
-        return panel;
-    }
-
-    private ImageIcon resizeImageIcon(String path, int width, int height) {
-        try {
-            BufferedImage img = ImageIO.read(getClass().getResource(path));
-            Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
-            return new ImageIcon(scaledImg);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    public JPanel createTeacherQuestionsPanel(String teacherName, ActionListener backListener) {
+        // Create a panel to hold questions and answers
         JPanel questionsPanel = new JPanel();
-        questionsPanel.setLayout(new BorderLayout());
+        questionsPanel.setLayout(new GridLayout(0, 1, 10, 10)); // One column with gaps for spacing
 
-        // Top panel for back button and title
-        JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        JButton backButton = new JButton("Back");
-        backButton.addActionListener(backListener);
-        topPanel.add(backButton);
+        // Hardcoded questions
+        String[] questions = {
+                "1. How effective is the teacher in explaining concepts?",
+                "2. How well does the teacher engage with the students during class?",
+                "3. How approachable is the teacher for questions and help?",
+                "4. Has the teacher contributed to your personal growth or interest in the subject?",
+                "5. How would you describe the classroom environment created by the teacher?"
+        };
 
-        JLabel titleLabel = new JLabel("Questions for " + teacherName, JLabel.LEFT);
-        topPanel.add(titleLabel);
+        // Array to hold JTextAreas for answers
+        answerFields = new JTextArea[questions.length];
 
-        questionsPanel.add(topPanel, BorderLayout.NORTH);
+        // Add each question and answer field to the panel
+        for (int i = 0; i < questions.length; i++) {
+            JPanel questionPanel = new JPanel();
+            questionPanel.setLayout(new BorderLayout());
 
-        // Placeholder for questions
-        JPanel questionsListPanel = new JPanel();
-        questionsListPanel.setLayout(new BoxLayout(questionsListPanel, BoxLayout.Y_AXIS));
-        for (int i = 1; i <= 5; i++) {
-            questionsListPanel.add(new JLabel("Question " + i));
+            JLabel questionLabel = new JLabel(questions[i]);
+            questionLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 5, 10)); // Padding
+
+            JTextArea answerField = new JTextArea(3, 30);
+            answerField.setLineWrap(true);
+            answerField.setWrapStyleWord(true);
+            answerField.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+            answerFields[i] = answerField;
+
+            JScrollPane scrollPane = new JScrollPane(answerField);
+
+            questionPanel.add(questionLabel, BorderLayout.NORTH);
+            questionPanel.add(scrollPane, BorderLayout.CENTER);
+
+            questionsPanel.add(questionPanel);
         }
-        questionsPanel.add(new JScrollPane(questionsListPanel), BorderLayout.CENTER);
 
-        return questionsPanel;
+        // Add a submit button
+        JButton submitButton = new JButton("Submit");
+        submitButton.addActionListener(e -> handleSubmit());
+
+        // Add components to the main panel
+        mainPanel.add(new JLabel("Please answer the following questions:", JLabel.CENTER), BorderLayout.NORTH);
+        mainPanel.add(questionsPanel, BorderLayout.CENTER);
+        mainPanel.add(submitButton, BorderLayout.SOUTH);
+    }
+
+    private void handleSubmit() {
+        // Handle submission logic here
+        JOptionPane.showMessageDialog(mainPanel, "Answers submitted successfully!");
+    }
+
+    public JPanel getMainPanel() {
+        return mainPanel;
     }
 }
