@@ -26,7 +26,8 @@ public class QAPanel extends JPanel {
     }
 
     public void addTeacher(String name, String imagePath) {
-        TeacherPanel teacherPanel = new TeacherPanel(name, imagePath);
+        ImageIcon teacherIcon = new ImageIcon(getClass().getResource(imagePath));
+        TeacherPanel teacherPanel = new TeacherPanel(name, teacherIcon);
         teacherPanels.add(teacherPanel);
         add(teacherPanel);
         revalidate();

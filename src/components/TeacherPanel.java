@@ -7,11 +7,11 @@ import java.awt.event.MouseEvent;
 
 public class TeacherPanel extends JPanel {
     private String teacherName;
-    private String teacherImagePath;
+    private ImageIcon teacherImage;
 
-    public TeacherPanel(String teacherName, String teacherImagePath) {
+    public TeacherPanel(String teacherName, ImageIcon teacherImage) {
         this.teacherName = teacherName;
-        this.teacherImagePath = teacherImagePath;
+        this.teacherImage = teacherImage;
         initUI();
     }
 
@@ -21,7 +21,7 @@ public class TeacherPanel extends JPanel {
         setBackground(Color.WHITE);
 
         // Add teacher image
-        JLabel imageLabel = new JLabel(new ImageIcon(getClass().getResource(teacherImagePath)));
+        JLabel imageLabel = new JLabel(teacherImage);
         imageLabel.setAlignmentX(CENTER_ALIGNMENT);
         add(imageLabel);
 

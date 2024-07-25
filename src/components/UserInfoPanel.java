@@ -18,7 +18,7 @@ public class UserInfoPanel extends JPanel {
             userIconImage = new ImageIcon(userIconImage.getImage().getScaledInstance(60, 60, Image.SCALE_SMOOTH));
         }
         JLabel userIcon = new JLabel(userIconImage);
-        JLabel userName = new JLabel("Nysa Rai");
+        JLabel userName = new JLabel("Krischal Sherstha");
 
         userIcon.setAlignmentX(Component.CENTER_ALIGNMENT);
         userName.setAlignmentX(Component.CENTER_ALIGNMENT);
