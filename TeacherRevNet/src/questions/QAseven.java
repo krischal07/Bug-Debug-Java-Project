@@ -1,5 +1,6 @@
 package questions;
 
+import dao.QADatabase;
 import javax.swing.JOptionPane;
 import main.StudentDashboard;
 
@@ -17,9 +18,11 @@ public class QAseven extends javax.swing.JFrame {
     /**
      * Creates new form QAone
      */
-    public QAseven() {
+    private String teacherName;
+    public QAseven(String teacherName) {
+        this.teacherName = teacherName;
         initComponents();
-                setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
 
     }
 
@@ -176,15 +179,28 @@ public class QAseven extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         
-                String textFieldContent = jTextField1.getText().trim();
-            
-            if(textFieldContent.isEmpty()){
-                JOptionPane.showMessageDialog(this, "This field should not be empty!!");
-            }
-            else{
-                new QAeight().setVisible(true);
-        this.dispose();
-            }
+//                String textFieldContent = jTextField1.getText().trim();
+//            
+//            if(textFieldContent.isEmpty()){
+//                JOptionPane.showMessageDialog(this, "This field should not be empty!!");
+//            }
+//            else{
+//                new QAeight().setVisible(true);
+//        this.dispose();
+//            }
+
+String textFieldContent = jTextField1.getText().trim();
+        if (textFieldContent.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "This field should not be empty!!");
+        } else {
+            // Save the question and answer to the database
+            String question = jLabel3.getText();
+            QADatabase.insertQA(teacherName, question, textFieldContent);
+
+            // Move to the next question panel
+            new QAeight(teacherName).setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_nextBtnActionPerformed
 
     private void nextBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextBtnMouseClicked
@@ -222,7 +238,7 @@ public class QAseven extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new QAone().setVisible(true);
+                new QAseven("Teacher1").setVisible(true);
             }
         });
     }

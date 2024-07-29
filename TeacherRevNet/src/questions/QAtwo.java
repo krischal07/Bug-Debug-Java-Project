@@ -1,4 +1,5 @@
 package questions;
+import dao.QADatabase;
 
 import javax.swing.JOptionPane;
 import main.StudentDashboard;
@@ -17,9 +18,11 @@ public class QAtwo extends javax.swing.JFrame {
     /**
      * Creates new form QAone
      */
-    public QAtwo() {
+    private String teacherName;
+    public QAtwo(String teacherName) {
+        this.teacherName = teacherName;
         initComponents();
-                setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
 
     }
 
@@ -175,15 +178,27 @@ public class QAtwo extends javax.swing.JFrame {
     private void nextBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBtnActionPerformed
         // TODO add your handling code here:
         
-        String textFieldContent = jTextField1.getText().trim();
-            
-            if(textFieldContent.isEmpty()){
-                JOptionPane.showMessageDialog(this, "This field should not be empty!!");
-            }
-            else{
-                new QAthree().setVisible(true);
-             this.dispose();
-            }
+//        String textFieldContent = jTextField1.getText().trim();
+//            
+//            if(textFieldContent.isEmpty()){
+//                JOptionPane.showMessageDialog(this, "This field should not be empty!!");
+//            }
+//            else{
+//                new QAthree().setVisible(true);
+//             this.dispose();
+//            }
+String textFieldContent = jTextField1.getText().trim();
+        if (textFieldContent.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "This field should not be empty!!");
+        } else {
+            // Save the question and answer to the database
+            String question = jLabel3.getText();
+            QADatabase.insertQA(teacherName, question, textFieldContent);
+
+            // Move to the next question panel
+            new QAthree(teacherName).setVisible(true);
+            this.dispose();
+        }
         
     }//GEN-LAST:event_nextBtnActionPerformed
 
@@ -222,7 +237,7 @@ public class QAtwo extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new QAone().setVisible(true);
+                new QAtwo("Teacher 1").setVisible(true);
             }
         });
     }
