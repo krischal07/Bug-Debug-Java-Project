@@ -1,5 +1,6 @@
 package questions;
 
+import dao.QADatabase;
 import javax.swing.JOptionPane;
 import main.StudentDashboard;
 
@@ -17,9 +18,12 @@ public class QAfour extends javax.swing.JFrame {
     /**
      * Creates new form QAone
      */
-    public QAfour() {
+     private String teacherName;
+
+    public QAfour(String teacherName) {
+        this.teacherName = teacherName;
         initComponents();
-                setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
 
     }
 
@@ -176,17 +180,30 @@ public class QAfour extends javax.swing.JFrame {
         // TODO add your handling code here:
         
          
-           String textFieldContent = jTextField1.getText().trim();
+//           String textFieldContent = jTextField1.getText().trim();
+//
+//    // Check if the text field is empty
+//    if (textFieldContent.isEmpty()) {
+//        // Show a message dialog if the text field is empty
+//        JOptionPane.showMessageDialog(this, "The text field should not be empty.", "Warning", JOptionPane.WARNING_MESSAGE);
+//    } else {
+//        // If not empty, proceed to the next window
+//         new QAfive(teacherName).setVisible(true);
+//         this.dispose();
+//    }
+    
+    String textFieldContent = jTextField1.getText().trim();
+        if (textFieldContent.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "This field should not be empty!!");
+        } else {
+            // Save the question and answer to the database
+            String question = jLabel3.getText();
+            QADatabase.insertQA(teacherName, question, textFieldContent);
 
-    // Check if the text field is empty
-    if (textFieldContent.isEmpty()) {
-        // Show a message dialog if the text field is empty
-        JOptionPane.showMessageDialog(this, "The text field should not be empty.", "Warning", JOptionPane.WARNING_MESSAGE);
-    } else {
-        // If not empty, proceed to the next window
-         new QAfive().setVisible(true);
-         this.dispose();
-    }
+            // Move to the next question panel
+            new QAfive(teacherName).setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_nextBtnActionPerformed
 
     private void nextBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextBtnMouseClicked
@@ -224,7 +241,7 @@ public class QAfour extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new QAone().setVisible(true);
+                new QAfour("Trcher1").setVisible(true);
             }
         });
     }
