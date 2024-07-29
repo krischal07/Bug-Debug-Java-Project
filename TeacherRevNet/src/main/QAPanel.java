@@ -1,6 +1,6 @@
 package main;
 
-
+import main.StudentDashboard;
 import questions.QAone;
 
 
@@ -21,6 +21,8 @@ public class QAPanel extends javax.swing.JFrame {
      */
     public QAPanel() {
         initComponents();
+        setLocationRelativeTo(null);
+
     }
 
     /**
@@ -41,7 +43,6 @@ public class QAPanel extends javax.swing.JFrame {
         dashboardLabel = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         qaLabel = new javax.swing.JLabel();
-        reviewLabel = new javax.swing.JLabel();
         settingLabel = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -79,7 +80,7 @@ public class QAPanel extends javax.swing.JFrame {
         logoutLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         logoutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/log-out.png"))); // NOI18N
         logoutLabel.setText("  Logout");
-        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 680, 180, 40));
+        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, 180, 40));
 
         jPanel2.setBackground(new java.awt.Color(194, 194, 194));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -89,8 +90,8 @@ public class QAPanel extends javax.swing.JFrame {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 70, 70));
 
         jLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 25)); // NOI18N
-        jLabel1.setText("Admin");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 90, -1));
+        jLabel1.setText("Student");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 110, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 270));
 
@@ -117,22 +118,11 @@ public class QAPanel extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 230, 50));
 
-        reviewLabel.setBackground(new java.awt.Color(0, 0, 0));
-        reviewLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        reviewLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/review.png"))); // NOI18N
-        reviewLabel.setText("  Review");
-        reviewLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                reviewLabelMouseClicked(evt);
-            }
-        });
-        jPanel1.add(reviewLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 180, -1));
-
         settingLabel.setBackground(new java.awt.Color(0, 0, 0));
         settingLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/settings.png"))); // NOI18N
         settingLabel.setText("  Settings");
-        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, 180, 40));
+        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 540, 180, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 800));
 
@@ -253,7 +243,7 @@ public class QAPanel extends javax.swing.JFrame {
 
     private void dashboardLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardLabelMouseClicked
         // TODO add your handling code here:
-        new AdminDashboard().setVisible(true);
+        new StudentDashboard().setVisible(true);
         this.dispose();
         
     }//GEN-LAST:event_dashboardLabelMouseClicked
@@ -293,12 +283,6 @@ new QAone().setVisible(true);
         this.dispose(); 
     }//GEN-LAST:event_jPanel11MouseClicked
 
-    private void reviewLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reviewLabelMouseClicked
-        new ReviewPanel2().setVisible(true);
-        this.dispose();
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reviewLabelMouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -329,7 +313,12 @@ new QAone().setVisible(true);
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new QAPanel().setVisible(true);
+//                new QAPanel().setVisible(true);
+//                new QAPanel().setLocationRelativeTo(null);
+                QAPanel QAPanel = new QAPanel();
+                QAPanel.setVisible(true);
+                QAPanel.setLocationRelativeTo(null);
+
             }
         });
     }
@@ -364,7 +353,6 @@ new QAone().setVisible(true);
     private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel logoutLabel;
     private javax.swing.JLabel qaLabel;
-    private javax.swing.JLabel reviewLabel;
     private javax.swing.JLabel settingLabel;
     // End of variables declaration//GEN-END:variables
 }

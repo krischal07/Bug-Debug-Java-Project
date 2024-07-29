@@ -201,7 +201,9 @@ public class ReviewPanel2 extends javax.swing.JFrame {
 
     private void dashboardLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardLabelMouseClicked
         // TODO add your handling code here:
-        new AdminDashboard().setVisible(true);
+        new StudentDashboard().setVisible(true);
+        this.dispose();
+
     }//GEN-LAST:event_dashboardLabelMouseClicked
 
     private void qaLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_qaLabelMouseClicked
@@ -213,6 +215,9 @@ public class ReviewPanel2 extends javax.swing.JFrame {
     private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
         // TODO add your handling code here:
         new SurveyForm().setVisible(true);
+//        this.dispose();
+
+
     }//GEN-LAST:event_jPanel6MouseClicked
 
     private void strongdisagree1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree1ActionPerformed

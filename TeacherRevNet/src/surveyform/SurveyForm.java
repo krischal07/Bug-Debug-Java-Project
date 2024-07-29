@@ -19,7 +19,9 @@ public class SurveyForm extends JFrame {
     public SurveyForm() {
         setTitle("Teacher Review Survey");
         setSize(500, 700);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE); // Ensure only the SurveyForm closes
+
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         // Load custom font

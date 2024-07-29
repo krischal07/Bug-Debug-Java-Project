@@ -1,7 +1,7 @@
 package questions;
 
 import javax.swing.JOptionPane;
-import main.AdminDashboard;
+import main.StudentDashboard;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -19,6 +19,8 @@ public class QAtwo extends javax.swing.JFrame {
      */
     public QAtwo() {
         initComponents();
+                setLocationRelativeTo(null);
+
     }
 
     /**
@@ -38,7 +40,6 @@ public class QAtwo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         dashboardLabel = new javax.swing.JLabel();
         qaLabel = new javax.swing.JLabel();
-        reviewLabel = new javax.swing.JLabel();
         settingLabel = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -63,7 +64,7 @@ public class QAtwo extends javax.swing.JFrame {
         logoutLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         logoutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/log-out.png"))); // NOI18N
         logoutLabel.setText("  Logout");
-        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 680, 180, 40));
+        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 180, 40));
 
         jPanel2.setBackground(new java.awt.Color(194, 194, 194));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -95,17 +96,11 @@ public class QAtwo extends javax.swing.JFrame {
         qaLabel.setText("  Q&A");
         jPanel1.add(qaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 180, -1));
 
-        reviewLabel.setBackground(new java.awt.Color(0, 0, 0));
-        reviewLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        reviewLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/review.png"))); // NOI18N
-        reviewLabel.setText("  Review");
-        jPanel1.add(reviewLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 180, -1));
-
         settingLabel.setBackground(new java.awt.Color(0, 0, 0));
         settingLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/settings.png"))); // NOI18N
         settingLabel.setText("  Settings");
-        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, 180, 40));
+        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 180, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 800));
 
@@ -248,7 +243,6 @@ public class QAtwo extends javax.swing.JFrame {
     private javax.swing.JLabel logoutLabel;
     private javax.swing.JButton nextBtn;
     private javax.swing.JLabel qaLabel;
-    private javax.swing.JLabel reviewLabel;
     private javax.swing.JLabel settingLabel;
     // End of variables declaration//GEN-END:variables
 }
