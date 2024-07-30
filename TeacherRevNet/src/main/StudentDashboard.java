@@ -55,7 +55,7 @@ public class StudentDashboard extends javax.swing.JFrame {
     
        public void showBarChart() {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-        dataset.setValue(1.5, "Rating", "Mr. Smith");
+        dataset.setValue(1.5, "Rating", "Aashish Khanal");
         dataset.setValue(3.2, "Rating", "Ms. Johnson");
         dataset.setValue(2.8, "Rating", "Mr. Williams");
         dataset.setValue(4.0, "Rating", "Ms. Brown");

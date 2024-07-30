@@ -14,7 +14,7 @@ import java.sql.SQLException;
 
 public class QADatabase {
     public static void insertQA(String teacherName, String question, String answer) {
-        String sql = "INSERT INTO qa (teacher_name, question, answer, rating) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO qa (teacher_name, question, answer) VALUES (?, ?, ?)";
 
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {

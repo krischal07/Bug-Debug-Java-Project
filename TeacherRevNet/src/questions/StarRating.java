@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package questions;
+import javax.swing.JOptionPane;
 import main.StudentDashboard;
 import rating.*;
 /**
@@ -42,7 +43,7 @@ public class StarRating extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        submitBtn = new javax.swing.JButton();
         starPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -128,14 +129,14 @@ public class StarRating extends javax.swing.JFrame {
         });
         jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 280, -1, -1));
 
-        jButton2.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
-        jButton2.setText("SUBMIT");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        submitBtn.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
+        submitBtn.setText("SUBMIT");
+        submitBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                submitBtnActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 280, -1, -1));
+        jPanel4.add(submitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 280, -1, -1));
 
         starPanel.setBackground(new java.awt.Color(209, 232, 254));
         starPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -170,6 +171,8 @@ public class StarRating extends javax.swing.JFrame {
 
     private void dashboardLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardLabelMouseClicked
         // TODO add your handling code here:
+       
+        
         new StudentDashboard().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_dashboardLabelMouseClicked
@@ -182,9 +185,13 @@ public class StarRating extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+
+        JOptionPane.showMessageDialog(this, "Redirecting to Dashboard.....");
+        new StudentDashboard().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_submitBtnActionPerformed
 
     private void starPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_starPanelMouseClicked
         // TODO add your handling code here:
@@ -229,7 +236,6 @@ public class StarRating extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel dashboardLabel;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -245,5 +251,6 @@ public class StarRating extends javax.swing.JFrame {
     private javax.swing.JLabel qaLabel;
     private javax.swing.JLabel settingLabel;
     private javax.swing.JPanel starPanel;
+    private javax.swing.JButton submitBtn;
     // End of variables declaration//GEN-END:variables
 }
