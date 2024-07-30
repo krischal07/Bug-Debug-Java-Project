@@ -103,6 +103,7 @@ public class StudentDashboard extends javax.swing.JFrame {
         settingLabel = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         dashboardLabel = new javax.swing.JLabel();
+        settingLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         barPanel = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -126,7 +127,7 @@ public class StudentDashboard extends javax.swing.JFrame {
         logoutLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         logoutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/log-out.png"))); // NOI18N
         logoutLabel.setText("  Logout");
-        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 180, 40));
+        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, 180, 40));
 
         jPanel2.setBackground(new java.awt.Color(194, 194, 194));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -154,9 +155,14 @@ public class StudentDashboard extends javax.swing.JFrame {
 
         settingLabel.setBackground(new java.awt.Color(0, 0, 0));
         settingLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/settings.png"))); // NOI18N
-        settingLabel.setText("  Settings");
-        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 180, 40));
+        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/rating.png"))); // NOI18N
+        settingLabel.setText("  Ratings");
+        settingLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                settingLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, 180, 40));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(null);
@@ -174,6 +180,12 @@ public class StudentDashboard extends javax.swing.JFrame {
         dashboardLabel.setBounds(10, 10, 180, 30);
 
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 230, 50));
+
+        settingLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        settingLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        settingLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/settings.png"))); // NOI18N
+        settingLabel1.setText("  Settings");
+        jPanel1.add(settingLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, 180, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 800));
 
@@ -221,6 +233,12 @@ public class StudentDashboard extends javax.swing.JFrame {
         new QAPanel().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_qaLabelMouseClicked
+
+    private void settingLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabelMouseClicked
+        // TODO add your handling code here:
+        new RatingPanel().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_settingLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -281,5 +299,6 @@ public class StudentDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel qaLabel;
     private javax.swing.JPanel quotePanel;
     private javax.swing.JLabel settingLabel;
+    private javax.swing.JLabel settingLabel1;
     // End of variables declaration//GEN-END:variables
 }

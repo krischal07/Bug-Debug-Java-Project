@@ -761,7 +761,7 @@ public class ReviewPanel extends javax.swing.JFrame {
 
         jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 710, 830));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 940, 1020));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 970, 1020));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -780,26 +780,6 @@ public class ReviewPanel extends javax.swing.JFrame {
         // TODO add your handling code here:
         new SurveyForm().setVisible(true);
     }//GEN-LAST:event_jPanel6MouseClicked
-
-    private void strongdisagreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagreeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_strongdisagreeActionPerformed
-
-    private void strongagreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagreeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_strongagreeActionPerformed
-
-    private void agreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agreeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_agreeActionPerformed
-
-    private void middleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middleActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_middleActionPerformed
-
-    private void disagreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disagreeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_disagreeActionPerformed
 
     private void strongdisagree1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree1ActionPerformed
         // TODO add your handling code here:
@@ -821,165 +801,185 @@ public class ReviewPanel extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_disagree1ActionPerformed
 
-    private void strongdisagree2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree2ActionPerformed
+    private void disagreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disagreeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongdisagree2ActionPerformed
+    }//GEN-LAST:event_disagreeActionPerformed
 
-    private void strongagree2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree2ActionPerformed
+    private void middleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongagree2ActionPerformed
+    }//GEN-LAST:event_middleActionPerformed
 
-    private void agree2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree2ActionPerformed
+    private void agreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agreeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_agree2ActionPerformed
+    }//GEN-LAST:event_agreeActionPerformed
 
-    private void middle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle2ActionPerformed
+    private void strongagreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagreeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_middle2ActionPerformed
+    }//GEN-LAST:event_strongagreeActionPerformed
+
+    private void strongdisagreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagreeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_strongdisagreeActionPerformed
 
     private void disagree2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disagree2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_disagree2ActionPerformed
 
-    private void strongdisagree3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree3ActionPerformed
+    private void middle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongdisagree3ActionPerformed
+    }//GEN-LAST:event_middle2ActionPerformed
 
-    private void strongagree3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree3ActionPerformed
+    private void agree2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongagree3ActionPerformed
+    }//GEN-LAST:event_agree2ActionPerformed
 
-    private void agree3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree3ActionPerformed
+    private void strongagree2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_agree3ActionPerformed
+    }//GEN-LAST:event_strongagree2ActionPerformed
 
-    private void middle3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle3ActionPerformed
+    private void strongdisagree2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_middle3ActionPerformed
+    }//GEN-LAST:event_strongdisagree2ActionPerformed
 
     private void disagree3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disagree3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_disagree3ActionPerformed
 
-    private void strongdisagree4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree4ActionPerformed
+    private void middle3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongdisagree4ActionPerformed
+    }//GEN-LAST:event_middle3ActionPerformed
 
-    private void strongagree4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree4ActionPerformed
+    private void agree3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongagree4ActionPerformed
+    }//GEN-LAST:event_agree3ActionPerformed
 
-    private void agree4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree4ActionPerformed
+    private void strongagree3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_agree4ActionPerformed
+    }//GEN-LAST:event_strongagree3ActionPerformed
 
-    private void middle4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle4ActionPerformed
+    private void strongdisagree3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_middle4ActionPerformed
+    }//GEN-LAST:event_strongdisagree3ActionPerformed
 
     private void disagree4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disagree4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_disagree4ActionPerformed
 
-    private void strongdisagree5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree5ActionPerformed
+    private void middle4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongdisagree5ActionPerformed
+    }//GEN-LAST:event_middle4ActionPerformed
 
-    private void strongagree5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree5ActionPerformed
+    private void agree4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongagree5ActionPerformed
+    }//GEN-LAST:event_agree4ActionPerformed
 
-    private void agree5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree5ActionPerformed
+    private void strongagree4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_agree5ActionPerformed
+    }//GEN-LAST:event_strongagree4ActionPerformed
 
-    private void middle5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle5ActionPerformed
+    private void strongdisagree4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_middle5ActionPerformed
+    }//GEN-LAST:event_strongdisagree4ActionPerformed
 
     private void disagree5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disagree5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_disagree5ActionPerformed
 
-    private void strongdisagree6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree6ActionPerformed
+    private void middle5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongdisagree6ActionPerformed
+    }//GEN-LAST:event_middle5ActionPerformed
 
-    private void strongagree6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree6ActionPerformed
+    private void agree5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongagree6ActionPerformed
+    }//GEN-LAST:event_agree5ActionPerformed
 
-    private void agree6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree6ActionPerformed
+    private void strongagree5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_agree6ActionPerformed
+    }//GEN-LAST:event_strongagree5ActionPerformed
 
-    private void middle6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle6ActionPerformed
+    private void strongdisagree5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_middle6ActionPerformed
+    }//GEN-LAST:event_strongdisagree5ActionPerformed
 
     private void disagree6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disagree6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_disagree6ActionPerformed
 
-    private void strongdisagree7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree7ActionPerformed
+    private void middle6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongdisagree7ActionPerformed
+    }//GEN-LAST:event_middle6ActionPerformed
 
-    private void strongagree7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree7ActionPerformed
+    private void agree6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongagree7ActionPerformed
+    }//GEN-LAST:event_agree6ActionPerformed
 
-    private void agree7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree7ActionPerformed
+    private void strongagree6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_agree7ActionPerformed
+    }//GEN-LAST:event_strongagree6ActionPerformed
 
-    private void middle7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle7ActionPerformed
+    private void strongdisagree6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_middle7ActionPerformed
+    }//GEN-LAST:event_strongdisagree6ActionPerformed
 
     private void disagree7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disagree7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_disagree7ActionPerformed
 
-    private void strongdisagree8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree8ActionPerformed
+    private void middle7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongdisagree8ActionPerformed
+    }//GEN-LAST:event_middle7ActionPerformed
 
-    private void strongagree8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree8ActionPerformed
+    private void agree7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongagree8ActionPerformed
+    }//GEN-LAST:event_agree7ActionPerformed
 
-    private void agree8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree8ActionPerformed
+    private void strongagree7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_agree8ActionPerformed
+    }//GEN-LAST:event_strongagree7ActionPerformed
 
-    private void middle8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle8ActionPerformed
+    private void strongdisagree7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_middle8ActionPerformed
+    }//GEN-LAST:event_strongdisagree7ActionPerformed
 
     private void disagree8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disagree8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_disagree8ActionPerformed
 
-    private void strongdisagree9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree9ActionPerformed
+    private void middle8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongdisagree9ActionPerformed
+    }//GEN-LAST:event_middle8ActionPerformed
 
-    private void strongagree9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree9ActionPerformed
+    private void agree8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_strongagree9ActionPerformed
+    }//GEN-LAST:event_agree8ActionPerformed
 
-    private void agree9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree9ActionPerformed
+    private void strongagree8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_agree9ActionPerformed
+    }//GEN-LAST:event_strongagree8ActionPerformed
+
+    private void strongdisagree8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_strongdisagree8ActionPerformed
+
+    private void disagree9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disagree9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_disagree9ActionPerformed
 
     private void middle9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middle9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_middle9ActionPerformed
 
-    private void disagree9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disagree9ActionPerformed
+    private void agree9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agree9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_disagree9ActionPerformed
+    }//GEN-LAST:event_agree9ActionPerformed
+
+    private void strongagree9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongagree9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_strongagree9ActionPerformed
+
+    private void strongdisagree9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strongdisagree9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_strongdisagree9ActionPerformed
 
     /**
      * @param args the command line arguments
