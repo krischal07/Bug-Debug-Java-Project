@@ -119,8 +119,8 @@ public class QAseven extends javax.swing.JFrame {
         jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 760, 40));
 
         jLabel5.setFont(new java.awt.Font("Poppins SemiBold", 0, 36)); // NOI18N
-        jLabel5.setText("Engagement & Interaction:");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 540, 40));
+        jLabel5.setText("7. Engagement & Interaction:");
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 570, 40));
 
         jTextField1.addCaretListener(new javax.swing.event.CaretListener() {
             public void caretUpdate(javax.swing.event.CaretEvent evt) {
