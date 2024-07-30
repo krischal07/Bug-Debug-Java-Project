@@ -40,14 +40,14 @@ public class AdminDashboard extends javax.swing.JFrame {
         initComponents();
         showBarChart();
           initializeQuotes();
-          displayRandomQuote(); 
+//          displayRandomQuote(); 
     }
     
-    private void displayRandomQuote() {
-        int index = random.nextInt(quotes.size());
-        String quote = quotes.get(index);
-        jLabel4.setText(quote);
-    }
+//    private void displayRandomQuote() {
+//        int index = random.nextInt(quotes.size());
+//        String quote = quotes.get(index);
+//        jLabel4.setText(quote);
+//    }
     
      private void initializeQuotes() {
         quotes = new ArrayList<>();
@@ -112,12 +112,18 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         barPanel = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         quotePanel = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        quotePanel1 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        quotePanel2 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -162,8 +168,13 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         settingLabel.setBackground(new java.awt.Color(0, 0, 0));
         settingLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/settings.png"))); // NOI18N
-        settingLabel.setText("  Settings");
+        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/viewuser.png"))); // NOI18N
+        settingLabel.setText("View User");
+        settingLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                settingLabelMouseClicked(evt);
+            }
+        });
         jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 180, 40));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
@@ -195,18 +206,21 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(209, 232, 254));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setFont(new java.awt.Font("Poppins Medium", 0, 24)); // NOI18N
-        jLabel7.setText("Download Reviews");
-        jPanel5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 230, 50));
-
+        jButton1.setBackground(new java.awt.Color(209, 232, 254));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/download.png"))); // NOI18N
-        jButton1.setText("jButton1");
+        jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, -1, 160));
+        jPanel5.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 150, 160));
+
+        jLabel9.setBackground(new java.awt.Color(30, 63, 168));
+        jLabel9.setFont(new java.awt.Font("Poppins Medium", 0, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(30, 63, 168));
+        jLabel9.setText("Download Reviews");
+        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 240, 50));
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 120, 330, 340));
 
@@ -218,15 +232,50 @@ public class AdminDashboard extends javax.swing.JFrame {
         quotePanel.setBackground(new java.awt.Color(209, 232, 254));
         quotePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
-        jLabel4.setText("“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” —Malcolm X");
-        quotePanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 830, 50));
+        jLabel8.setBackground(new java.awt.Color(30, 63, 168));
+        jLabel8.setFont(new java.awt.Font("Poppins Medium", 0, 48)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(30, 63, 168));
+        jLabel8.setText("820");
+        quotePanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 110, 50));
 
-        jLabel5.setFont(new java.awt.Font("Poppins Medium", 0, 48)); // NOI18N
-        jLabel5.setText("Daily Motivation");
-        quotePanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 690, 50));
+        jLabel7.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(246, 138, 30));
+        jLabel7.setText("Total Number of Students");
+        quotePanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 270, 50));
 
-        jPanel3.add(quotePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 870, 160));
+        jPanel3.add(quotePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 290, 160));
+
+        quotePanel1.setBackground(new java.awt.Color(209, 232, 254));
+        quotePanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel14.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(246, 138, 30));
+        jLabel14.setText("Programmes");
+        quotePanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 150, 50));
+
+        jLabel15.setBackground(new java.awt.Color(30, 63, 168));
+        jLabel15.setFont(new java.awt.Font("Poppins Medium", 0, 48)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(30, 63, 168));
+        jLabel15.setText("9");
+        quotePanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 110, 50));
+
+        jPanel3.add(quotePanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 520, 200, 160));
+
+        quotePanel2.setBackground(new java.awt.Color(209, 232, 254));
+        quotePanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel12.setBackground(new java.awt.Color(30, 63, 168));
+        jLabel12.setFont(new java.awt.Font("Poppins Medium", 0, 48)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(30, 63, 168));
+        jLabel12.setText("25");
+        quotePanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 110, 50));
+
+        jLabel13.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(246, 138, 30));
+        jLabel13.setText("Total Number of Teachers");
+        quotePanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 270, 50));
+
+        jPanel3.add(quotePanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 520, 270, 160));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 940, 800));
 
@@ -255,6 +304,12 @@ public class AdminDashboard extends javax.swing.JFrame {
     JOptionPane.showMessageDialog(null, "PDF generated: " + dest);
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void settingLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabelMouseClicked
+        // TODO add your handling code here:
+        new ViewUser().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_settingLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -305,11 +360,15 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -318,6 +377,8 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel logoutLabel;
     private javax.swing.JLabel qaLabel;
     private javax.swing.JPanel quotePanel;
+    private javax.swing.JPanel quotePanel1;
+    private javax.swing.JPanel quotePanel2;
     private javax.swing.JLabel settingLabel;
     // End of variables declaration//GEN-END:variables
 }
