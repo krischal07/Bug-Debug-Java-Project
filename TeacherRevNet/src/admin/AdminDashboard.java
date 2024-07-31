@@ -17,6 +17,7 @@ import dao.DatabaseUtil;
 import java.awt.event.ActionEvent;
 import java.io.File;
 import javax.swing.JOptionPane;
+import login.Login;
 import main.QAPanel;
 import util.PDFGenerator;
 /*
@@ -133,6 +134,11 @@ public class AdminDashboard extends javax.swing.JFrame {
         logoutLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         logoutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/log-out.png"))); // NOI18N
         logoutLabel.setText("  Logout");
+        logoutLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutLabelMouseClicked(evt);
+            }
+        });
         jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 180, 40));
 
         jPanel2.setBackground(new java.awt.Color(194, 194, 194));
@@ -335,6 +341,15 @@ public class AdminDashboard extends javax.swing.JFrame {
      }
       
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void logoutLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutLabelMouseClicked
+        // TODO add your handling code here:
+       int a = JOptionPane.showConfirmDialog(null, "Do you want to Logout?","Select",JOptionPane.YES_NO_OPTION);
+     if(a==0){
+         new Login().setVisible(true);
+         this.dispose();
+     }
+    }//GEN-LAST:event_logoutLabelMouseClicked
 
     /**
      * @param args the command line arguments
