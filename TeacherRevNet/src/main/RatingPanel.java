@@ -2,7 +2,8 @@ package main;
 
 import main.StudentDashboard;
 import questions.QAone;
-import rating.ReviewOne;
+import rating.*;
+//import rating.ReviewThree;
 
 
 
@@ -300,19 +301,19 @@ public class RatingPanel extends javax.swing.JFrame {
 
     private void teacher6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher6MouseClicked
         // TODO add your handling code here:
-        new QAone("Teacher 6").setVisible(true);
+        new ReviewSix().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_teacher6MouseClicked
 
     private void teacher4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher4MouseClicked
         // TODO add your handling code here:
-        new QAone("Techer 4").setVisible(true);
+        new ReviewFour().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_teacher4MouseClicked
 
     private void teacher5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher5MouseClicked
         // TODO add your handling code here:
-        new QAone("Teacher 5").setVisible(true);
+        new ReviewFive().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_teacher5MouseClicked
 
@@ -323,13 +324,13 @@ public class RatingPanel extends javax.swing.JFrame {
 
     private void teacher2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher2MouseClicked
         // TODO add your handling code here:
-        new QAone("Teacher 2").setVisible(true);
+        new ReviewTwo().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_teacher2MouseClicked
 
     private void teacher3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher3MouseClicked
         // TODO add your handling code here:
-        new QAone("Teacher 3").setVisible(true);
+        new ReviewThree().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_teacher3MouseClicked
 

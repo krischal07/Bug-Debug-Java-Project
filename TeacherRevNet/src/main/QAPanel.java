@@ -43,8 +43,8 @@ public class QAPanel extends javax.swing.JFrame {
         qaLabel = new javax.swing.JLabel();
         settingLabel = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        dashboardLabel = new javax.swing.JLabel();
         settingLabel1 = new javax.swing.JLabel();
+        dashboardLabel = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         teacher6 = new javax.swing.JPanel();
@@ -121,6 +121,13 @@ public class QAPanel extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(null);
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 230, 50));
+
+        settingLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        settingLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        settingLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/settings.png"))); // NOI18N
+        settingLabel1.setText("  Settings");
+        jPanel1.add(settingLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, 180, 40));
 
         dashboardLabel.setBackground(new java.awt.Color(0, 0, 0));
         dashboardLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
@@ -131,16 +138,7 @@ public class QAPanel extends javax.swing.JFrame {
                 dashboardLabelMouseClicked(evt);
             }
         });
-        jPanel6.add(dashboardLabel);
-        dashboardLabel.setBounds(10, 10, 180, 30);
-
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 230, 50));
-
-        settingLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        settingLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        settingLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/settings.png"))); // NOI18N
-        settingLabel1.setText("  Settings");
-        jPanel1.add(settingLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, 180, 40));
+        jPanel1.add(dashboardLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 180, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 800));
 
