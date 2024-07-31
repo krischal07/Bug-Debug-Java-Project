@@ -12,6 +12,7 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import login.Login;
 
 /**
  *
@@ -78,6 +79,11 @@ public class ViewUser extends javax.swing.JFrame {
         logoutLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         logoutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/log-out.png"))); // NOI18N
         logoutLabel.setText("  Logout");
+        logoutLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutLabelMouseClicked(evt);
+            }
+        });
         jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 180, 40));
 
         jPanel2.setBackground(new java.awt.Color(194, 194, 194));
@@ -130,9 +136,9 @@ public class ViewUser extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Poppins SemiBold", 1, 48)); // NOI18N
-        jLabel3.setText("Click on row to delete user");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 580, 750, -1));
+        jLabel3.setFont(new java.awt.Font("Poppins SemiBold", 1, 32)); // NOI18N
+        jLabel3.setText("              Note: Click on row to delete user");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, 850, -1));
 
         jTable1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jTable1.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
@@ -218,6 +224,15 @@ int index = jTable1.getSelectedRow();
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_formComponentShown
+
+    private void logoutLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutLabelMouseClicked
+        // TODO add your handling code here:
+           int a = JOptionPane.showConfirmDialog(null, "Do you want to Logout?","Select",JOptionPane.YES_NO_OPTION);
+     if(a==0){
+         new Login().setVisible(true);
+         this.dispose();
+     }
+    }//GEN-LAST:event_logoutLabelMouseClicked
 
     /**
      * @param args the command line arguments

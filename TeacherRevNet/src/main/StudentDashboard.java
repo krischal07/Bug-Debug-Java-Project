@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import javax.swing.JOptionPane;
+import login.Login;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -17,7 +19,6 @@ import org.jfree.data.category.DefaultCategoryDataset;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author kr
@@ -29,21 +30,21 @@ public class StudentDashboard extends javax.swing.JFrame {
      */
     private List<String> quotes; // List to hold quotes
     private Random random; // Random object for generating random indices
-    
+
     public StudentDashboard() {
         initComponents();
         showBarChart();
-          initializeQuotes();
-          displayRandomQuote(); 
+        initializeQuotes();
+        displayRandomQuote();
     }
-    
+
     private void displayRandomQuote() {
         int index = random.nextInt(quotes.size());
         String quote = quotes.get(index);
         jLabel4.setText(quote);
     }
-    
-     private void initializeQuotes() {
+
+    private void initializeQuotes() {
         quotes = new ArrayList<>();
         quotes.add("“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” —Malcolm X");
         quotes.add("“The beautiful thing about learning is that no one can take it away from you.” —B.B. King");
@@ -52,8 +53,8 @@ public class StudentDashboard extends javax.swing.JFrame {
         quotes.add("“Education is not preparation for life; education is life itself.” —John Dewey");
         random = new Random();
     }
-    
-       public void showBarChart() {
+
+    public void showBarChart() {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         dataset.setValue(1.5, "Rating", "Aashish Khanal");
         dataset.setValue(3.2, "Rating", "Ms. Johnson");
@@ -81,8 +82,6 @@ public class StudentDashboard extends javax.swing.JFrame {
         this.barPanel.add(chartPanel, BorderLayout.CENTER);
         this.barPanel.validate();
     }
-
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -126,7 +125,12 @@ public class StudentDashboard extends javax.swing.JFrame {
         logoutLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         logoutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/log-out.png"))); // NOI18N
         logoutLabel.setText("  Logout");
-        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 180, 40));
+        logoutLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, 180, 40));
 
         jPanel2.setBackground(new java.awt.Color(194, 194, 194));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -154,9 +158,14 @@ public class StudentDashboard extends javax.swing.JFrame {
 
         settingLabel.setBackground(new java.awt.Color(0, 0, 0));
         settingLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/settings.png"))); // NOI18N
-        settingLabel.setText("  Settings");
-        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 180, 40));
+        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/rating.png"))); // NOI18N
+        settingLabel.setText("  Ratings");
+        settingLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                settingLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, 180, 40));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(null);
@@ -221,6 +230,21 @@ public class StudentDashboard extends javax.swing.JFrame {
         new QAPanel().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_qaLabelMouseClicked
+
+    private void settingLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabelMouseClicked
+        // TODO add your handling code here:
+        new RatingPanel().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_settingLabelMouseClicked
+
+    private void logoutLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutLabelMouseClicked
+        // TODO add your handling code here:
+        int a = JOptionPane.showConfirmDialog(null, "Do you want to Logout?", "Select", JOptionPane.YES_NO_OPTION);
+        if (a == 0) {
+            new Login().setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_logoutLabelMouseClicked
 
     /**
      * @param args the command line arguments

@@ -165,6 +165,8 @@ public class QAtwo extends javax.swing.JFrame {
         // TODO add your handling code here:
 //        new AdminDashboard().setVisible(true);
 //        this.dispose();
+ new StudentDashboard().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_dashboardLabelMouseClicked
 
     private void jTextField1CaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField1CaretUpdate

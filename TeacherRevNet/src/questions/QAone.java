@@ -77,8 +77,8 @@ public class QAone extends javax.swing.JFrame {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 70, 70));
 
         jLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 25)); // NOI18N
-        jLabel1.setText("Admin");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 90, -1));
+        jLabel1.setText("Student");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 270));
 

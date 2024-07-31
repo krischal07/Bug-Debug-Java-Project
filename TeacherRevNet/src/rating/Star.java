@@ -10,15 +10,14 @@ public class Star extends JFrame {
     private int rating = 0; // Default rating
     private JLabel[] stars = new JLabel[5]; // Array to hold star labels
     private JLabel ratingDisplay;
+    private int selectedRating = 0; // Store the selected rating
+    private RatingSubmitListener submitListener;
 
     public Star() {
         setTitle("Star Rating Example");
-        setSize(500, 200); // Increase size to accommodate the button and rating label
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Ensure only the SurveyForm closes
-
+        setSize(500, 200);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(new FlowLayout());
-
-        // Center the frame
         setLocationRelativeTo(null);
 
         // Create star labels and set their icons
@@ -48,12 +47,14 @@ public class Star extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(null, "You rated: " + rating + " stars");
-                dispose();
+                if (submitListener != null) {
+                    submitListener.onRatingSubmitted(selectedRating);
+                }
+                dispose(); // Close the Star window
             }
         });
         add(submitButton);
 
-        // Initialize star rating display
         updateStars();
     }
 
@@ -67,6 +68,7 @@ public class Star extends JFrame {
     private void setRating(int newRating) {
         rating = newRating;
         updateStars();
+        selectedRating = newRating; // Store the selected rating
     }
 
     private ImageIcon loadIcon(String fileName) {
@@ -77,6 +79,21 @@ public class Star extends JFrame {
             System.err.println("Couldn't find file: " + fileName);
             return null;
         }
+    }
+
+    // Method to retrieve the selected rating
+    public int getRating() {
+        return selectedRating;
+    }
+
+    // Method to set the listener for rating submission
+    public void setRatingSubmitListener(RatingSubmitListener listener) {
+        this.submitListener = listener;
+    }
+
+    // Interface for rating submission listener
+    public interface RatingSubmitListener {
+        void onRatingSubmitted(int rating);
     }
 
     public static void main(String[] args) {

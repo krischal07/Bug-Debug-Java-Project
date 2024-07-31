@@ -155,7 +155,7 @@ public class StarRating extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Poppins SemiBold", 0, 36)); // NOI18N
         jLabel6.setText("Rating:");
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 490, 40));
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 170, 40));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 830, 340));
 
@@ -196,6 +196,7 @@ public class StarRating extends javax.swing.JFrame {
     private void starPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_starPanelMouseClicked
         // TODO add your handling code here:
          new Star().setVisible(true);
+         
     }//GEN-LAST:event_starPanelMouseClicked
 
     /**

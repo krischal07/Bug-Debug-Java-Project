@@ -19,11 +19,11 @@ public class QAPanel extends javax.swing.JFrame {
     /**
      * Creates new form QAPanel
      */
+  
     public QAPanel() {
         initComponents();
         setLocationRelativeTo(null);
-
-    }
+           }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,30 +40,36 @@ public class QAPanel extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        dashboardLabel = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
         qaLabel = new javax.swing.JLabel();
         settingLabel = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        dashboardLabel = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         teacher6 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         teacher4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         teacher5 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         teacher1 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         teacher2 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         teacher3 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -80,7 +86,7 @@ public class QAPanel extends javax.swing.JFrame {
         logoutLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         logoutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/log-out.png"))); // NOI18N
         logoutLabel.setText("  Logout");
-        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, 180, 40));
+        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, 180, 40));
 
         jPanel2.setBackground(new java.awt.Color(194, 194, 194));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -91,9 +97,35 @@ public class QAPanel extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 25)); // NOI18N
         jLabel1.setText("Student");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 110, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 100, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 270));
+
+        qaLabel.setBackground(new java.awt.Color(0, 0, 0));
+        qaLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        qaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/qa.png"))); // NOI18N
+        qaLabel.setText("  Q&A");
+        qaLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                qaLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(qaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 180, -1));
+
+        settingLabel.setBackground(new java.awt.Color(0, 0, 0));
+        settingLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/rating.png"))); // NOI18N
+        settingLabel.setText("  Ratings");
+        settingLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                settingLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, 180, 40));
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setLayout(null);
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 230, 50));
 
         dashboardLabel.setBackground(new java.awt.Color(0, 0, 0));
         dashboardLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
@@ -104,25 +136,7 @@ public class QAPanel extends javax.swing.JFrame {
                 dashboardLabelMouseClicked(evt);
             }
         });
-        jPanel1.add(dashboardLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 180, -1));
-
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setLayout(null);
-
-        qaLabel.setBackground(new java.awt.Color(0, 0, 0));
-        qaLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        qaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/qa.png"))); // NOI18N
-        qaLabel.setText("  Q&A");
-        jPanel4.add(qaLabel);
-        qaLabel.setBounds(10, 10, 92, 32);
-
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 230, 50));
-
-        settingLabel.setBackground(new java.awt.Color(0, 0, 0));
-        settingLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/settings.png"))); // NOI18N
-        settingLabel.setText("  Settings");
-        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 540, 180, 40));
+        jPanel1.add(dashboardLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 180, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 800));
 
@@ -142,12 +156,17 @@ public class QAPanel extends javax.swing.JFrame {
         });
         teacher6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/teacher1.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/teacher6.png"))); // NOI18N
         teacher6.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 210));
 
-        jLabel9.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
-        jLabel9.setText("Teacher 6");
-        teacher6.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 120, -1));
+        jLabel25.setBackground(new java.awt.Color(246, 138, 30));
+        jLabel25.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(30, 63, 138));
+        jLabel25.setText("(4.9)Lebron Shrestha");
+        teacher6.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 180, 20));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/star24px.png"))); // NOI18N
+        teacher6.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, 30));
 
         jPanel3.add(teacher6, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 450, 220, 250));
 
@@ -159,12 +178,17 @@ public class QAPanel extends javax.swing.JFrame {
         });
         teacher4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/teacher1.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/teacher4.png"))); // NOI18N
         teacher4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 210));
 
-        jLabel12.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
-        jLabel12.setText("Teacher 4");
-        teacher4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 120, -1));
+        jLabel23.setBackground(new java.awt.Color(246, 138, 30));
+        jLabel23.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(30, 63, 138));
+        jLabel23.setText("(4.5) Hari Chapagain");
+        teacher4.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 190, 20));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/star24px.png"))); // NOI18N
+        teacher4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, 30));
 
         jPanel3.add(teacher4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 220, 250));
 
@@ -176,12 +200,17 @@ public class QAPanel extends javax.swing.JFrame {
         });
         teacher5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/teacher1.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/techer5.png"))); // NOI18N
         teacher5.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 210));
 
-        jLabel14.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
-        jLabel14.setText("Teacher 5");
-        teacher5.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 120, 30));
+        jLabel24.setBackground(new java.awt.Color(246, 138, 30));
+        jLabel24.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(30, 63, 138));
+        jLabel24.setText("(4.8)Bimal Pakhrin");
+        teacher5.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 200, 20));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/star24px.png"))); // NOI18N
+        teacher5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, 30));
 
         jPanel3.add(teacher5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 220, 250));
 
@@ -196,9 +225,14 @@ public class QAPanel extends javax.swing.JFrame {
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/teacher1.png"))); // NOI18N
         teacher1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 210));
 
-        jLabel16.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
-        jLabel16.setText("Teacher 1");
-        teacher1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 120, -1));
+        jLabel16.setBackground(new java.awt.Color(246, 138, 30));
+        jLabel16.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(30, 63, 138));
+        jLabel16.setText("(4.6) Riya Sharma");
+        teacher1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 208, 180, 40));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/star24px.png"))); // NOI18N
+        teacher1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, 30));
 
         jPanel3.add(teacher1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 220, 250));
 
@@ -210,12 +244,17 @@ public class QAPanel extends javax.swing.JFrame {
         });
         teacher2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/teacher1.png"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/teacher2.png"))); // NOI18N
         teacher2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 210));
 
-        jLabel18.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
-        jLabel18.setText("Teacher 2");
-        teacher2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 120, 30));
+        jLabel21.setBackground(new java.awt.Color(246, 138, 30));
+        jLabel21.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(30, 63, 138));
+        jLabel21.setText("(4.7) Isha Rai");
+        teacher2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 208, 150, 40));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/star24px.png"))); // NOI18N
+        teacher2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, 30));
 
         jPanel3.add(teacher2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 220, 250));
 
@@ -227,12 +266,17 @@ public class QAPanel extends javax.swing.JFrame {
         });
         teacher3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/teacher1.png"))); // NOI18N
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/teacher3.png"))); // NOI18N
         teacher3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 210));
 
-        jLabel20.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
-        jLabel20.setText("Teacher 3");
-        teacher3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 120, -1));
+        jLabel22.setBackground(new java.awt.Color(246, 138, 30));
+        jLabel22.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(30, 63, 138));
+        jLabel22.setText("(4.3) Ram Kumar");
+        teacher3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 190, 20));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/star24px.png"))); // NOI18N
+        teacher3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, 30));
 
         jPanel3.add(teacher3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 110, 220, 250));
 
@@ -241,47 +285,56 @@ public class QAPanel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void qaLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_qaLabelMouseClicked
+        // TODO add your handling code here:
+        new QAPanel().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_qaLabelMouseClicked
+
     private void dashboardLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardLabelMouseClicked
         // TODO add your handling code here:
-        new StudentDashboard().setVisible(true);
-        this.dispose();
-        
     }//GEN-LAST:event_dashboardLabelMouseClicked
+
+    private void teacher6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher6MouseClicked
+        // TODO add your handling code here:
+        new QAone("Lebron Shrestha").setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_teacher6MouseClicked
 
     private void teacher4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher4MouseClicked
         // TODO add your handling code here:
-        new QAone("Techer 4").setVisible(true);
+        new QAone("hari Chapagain").setVisible(true);
         this.dispose();
     }//GEN-LAST:event_teacher4MouseClicked
 
     private void teacher5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher5MouseClicked
         // TODO add your handling code here:
-        new QAone("Teacher 5").setVisible(true);
-        this.dispose(); 
+        new QAone("Bimal Pakhrin").setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_teacher5MouseClicked
 
     private void teacher1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher1MouseClicked
-new QAone("Teacher 1").setVisible(true);
+        new QAone("Riya Sharma").setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_teacher1MouseClicked
 
     private void teacher2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher2MouseClicked
         // TODO add your handling code here:
-        new QAone("Teacher 2").setVisible(true);
-        this.dispose(); 
+        new QAone("Isha Rai").setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_teacher2MouseClicked
-
-    private void teacher6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher6MouseClicked
-        // TODO add your handling code here:
-        new QAone("Teacher 6").setVisible(true);
-        this.dispose(); 
-    }//GEN-LAST:event_teacher6MouseClicked
 
     private void teacher3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher3MouseClicked
         // TODO add your handling code here:
-        new QAone("Teacher 3").setVisible(true);
-        this.dispose(); 
+        new QAone("Ram Kumar").setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_teacher3MouseClicked
+
+    private void settingLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabelMouseClicked
+        // TODO add your handling code here:
+        new RatingPanel().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_settingLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -330,21 +383,27 @@ new QAone("Teacher 1").setVisible(true);
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JLabel logoutLabel;
     private javax.swing.JLabel qaLabel;
     private javax.swing.JLabel settingLabel;
