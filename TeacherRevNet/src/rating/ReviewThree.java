@@ -9,6 +9,8 @@ import dao.DatabaseConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
+import login.Login;
+import main.QAPanel;
 import main.StudentDashboard;
 
 /**
@@ -37,15 +39,6 @@ public class ReviewThree extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        logoutLabel = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        dashboardLabel = new javax.swing.JLabel();
-        qaLabel = new javax.swing.JLabel();
-        settingLabel = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jRadioButton1 = new javax.swing.JRadioButton();
@@ -56,61 +49,19 @@ public class ReviewThree extends javax.swing.JFrame {
         ratingLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        logoutLabel = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        qaLabel = new javax.swing.JLabel();
+        settingLabel = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        dashboardLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
-        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/kist 1.png"))); // NOI18N
-        jLabel10.setText("Logo");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
-
-        logoutLabel.setBackground(new java.awt.Color(0, 0, 0));
-        logoutLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        logoutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/log-out.png"))); // NOI18N
-        logoutLabel.setText("  Logout");
-        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 590, 180, 40));
-
-        jPanel2.setBackground(new java.awt.Color(194, 194, 194));
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/profile-user.png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 70, 70));
-
-        jLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 25)); // NOI18N
-        jLabel1.setText("Studnet");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 110, -1));
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 270));
-
-        dashboardLabel.setBackground(new java.awt.Color(0, 0, 0));
-        dashboardLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        dashboardLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/dashboard.png"))); // NOI18N
-        dashboardLabel.setText("  Dashboard");
-        dashboardLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dashboardLabelMouseClicked(evt);
-            }
-        });
-        jPanel1.add(dashboardLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 180, -1));
-
-        qaLabel.setBackground(new java.awt.Color(0, 0, 0));
-        qaLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        qaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/qa.png"))); // NOI18N
-        qaLabel.setText("  Q&A");
-        jPanel1.add(qaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 180, -1));
-
-        settingLabel.setBackground(new java.awt.Color(0, 0, 0));
-        settingLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/settings.png"))); // NOI18N
-        settingLabel.setText("  Settings");
-        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, 180, 40));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 800));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -178,15 +129,74 @@ public class ReviewThree extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 940, 800));
 
+        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/kist 1.png"))); // NOI18N
+        jLabel10.setText("Logo");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
+
+        logoutLabel.setBackground(new java.awt.Color(0, 0, 0));
+        logoutLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        logoutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/log-out.png"))); // NOI18N
+        logoutLabel.setText("  Logout");
+        logoutLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 180, 40));
+
+        jPanel2.setBackground(new java.awt.Color(194, 194, 194));
+        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/profile-user.png"))); // NOI18N
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 70, 70));
+
+        jLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 25)); // NOI18N
+        jLabel1.setText("Student");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 100, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 270));
+
+        qaLabel.setBackground(new java.awt.Color(0, 0, 0));
+        qaLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        qaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/qa.png"))); // NOI18N
+        qaLabel.setText("  Q&A");
+        qaLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                qaLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(qaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 180, -1));
+
+        settingLabel.setBackground(new java.awt.Color(0, 0, 0));
+        settingLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/rating.png"))); // NOI18N
+        settingLabel.setText("  Ratings");
+        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, 180, 40));
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setLayout(null);
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 230, 50));
+
+        dashboardLabel.setBackground(new java.awt.Color(0, 0, 0));
+        dashboardLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        dashboardLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/dashboard.png"))); // NOI18N
+        dashboardLabel.setText("  Dashboard");
+        dashboardLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dashboardLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(dashboardLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 180, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 800));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void dashboardLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardLabelMouseClicked
-        // TODO add your handling code here:
-
-        new StudentDashboard().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_dashboardLabelMouseClicked
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
@@ -244,6 +254,22 @@ public class ReviewThree extends javax.swing.JFrame {
         });
     }//GEN-LAST:event_starPanelMouseClicked
 
+    private void logoutLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutLabelMouseClicked
+        // TODO add your handling code here:
+        new Login().setVisible(true);
+    }//GEN-LAST:event_logoutLabelMouseClicked
+
+    private void qaLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_qaLabelMouseClicked
+        // TODO add your handling code here:
+        new QAPanel().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_qaLabelMouseClicked
+
+    private void dashboardLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardLabelMouseClicked
+        // TODO add your handling code here:
+        new StudentDashboard().setVisible(true);
+    }//GEN-LAST:event_dashboardLabelMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -295,6 +321,7 @@ public class ReviewThree extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JLabel logoutLabel;
     private javax.swing.JLabel qaLabel;

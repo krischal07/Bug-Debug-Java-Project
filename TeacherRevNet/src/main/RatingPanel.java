@@ -1,5 +1,7 @@
 package main;
 
+import javax.swing.JOptionPane;
+import login.Login;
 import main.StudentDashboard;
 import questions.QAone;
 import rating.*;
@@ -45,7 +47,6 @@ public class RatingPanel extends javax.swing.JFrame {
         qaLabel = new javax.swing.JLabel();
         settingLabel = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        settingLabel1 = new javax.swing.JLabel();
         dashboardLabel = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -89,7 +90,12 @@ public class RatingPanel extends javax.swing.JFrame {
         logoutLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         logoutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/log-out.png"))); // NOI18N
         logoutLabel.setText("  Logout");
-        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, 180, 40));
+        logoutLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 180, 40));
 
         jPanel2.setBackground(new java.awt.Color(194, 194, 194));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -124,12 +130,6 @@ public class RatingPanel extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(null);
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 230, 50));
-
-        settingLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        settingLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        settingLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/settings.png"))); // NOI18N
-        settingLabel1.setText("  Settings");
-        jPanel1.add(settingLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, 180, 40));
 
         dashboardLabel.setBackground(new java.awt.Color(0, 0, 0));
         dashboardLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
@@ -291,12 +291,13 @@ public class RatingPanel extends javax.swing.JFrame {
 
     private void qaLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_qaLabelMouseClicked
         // TODO add your handling code here:
-        new RatingPanel().setVisible(true);
+        new QAPanel().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_qaLabelMouseClicked
 
     private void dashboardLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardLabelMouseClicked
         // TODO add your handling code here:
+        new StudentDashboard().setVisible(true);
     }//GEN-LAST:event_dashboardLabelMouseClicked
 
     private void teacher6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacher6MouseClicked
@@ -333,6 +334,15 @@ public class RatingPanel extends javax.swing.JFrame {
         new ReviewThree().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_teacher3MouseClicked
+
+    private void logoutLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutLabelMouseClicked
+        // TODO add your handling code here:
+        int a = JOptionPane.showConfirmDialog(null, "Do you want to Logout?","Select",JOptionPane.YES_NO_OPTION);
+     if(a==0){
+         new Login().setVisible(true);
+         this.dispose();
+     }
+    }//GEN-LAST:event_logoutLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -406,7 +416,6 @@ public class RatingPanel extends javax.swing.JFrame {
     private javax.swing.JLabel logoutLabel;
     private javax.swing.JLabel qaLabel;
     private javax.swing.JLabel settingLabel;
-    private javax.swing.JLabel settingLabel1;
     private javax.swing.JPanel teacher1;
     private javax.swing.JPanel teacher2;
     private javax.swing.JPanel teacher3;
