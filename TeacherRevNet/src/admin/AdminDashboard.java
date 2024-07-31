@@ -39,7 +39,7 @@ public class AdminDashboard extends javax.swing.JFrame {
     public AdminDashboard() {
         initComponents();
         showBarChart();
-          initializeQuotes();
+
 //          displayRandomQuote(); 
     }
     
@@ -49,15 +49,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 //        jLabel4.setText(quote);
 //    }
     
-     private void initializeQuotes() {
-        quotes = new ArrayList<>();
-        quotes.add("“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” —Malcolm X");
-        quotes.add("“The beautiful thing about learning is that no one can take it away from you.” —B.B. King");
-        quotes.add("“An investment in knowledge pays the best interest.” —Benjamin Franklin");
-        quotes.add("“The purpose of education is to replace an empty mind with an open one.” —Malcolm Forbes");
-        quotes.add("“Education is not preparation for life; education is life itself.” —John Dewey");
-        random = new Random();
-    }
+   
     
        public void showBarChart() {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
@@ -114,6 +106,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         quotePanel = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -214,13 +207,21 @@ public class AdminDashboard extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 150, 160));
+        jPanel5.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 150, 120));
 
         jLabel9.setBackground(new java.awt.Color(30, 63, 168));
         jLabel9.setFont(new java.awt.Font("Poppins Medium", 0, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(30, 63, 168));
         jLabel9.setText("Download Reviews");
         jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 240, 50));
+
+        jButton2.setText("Rating data");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, -1, -1));
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 120, 330, 340));
 
@@ -311,6 +312,17 @@ public class AdminDashboard extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_settingLabelMouseClicked
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String dest = System.getProperty("user.home") + "/Downloads/rating_data.pdf";
+    
+    // Generate the PDF
+       RatingPDFGenerator.generatePDF(dest);
+    
+    // Show success message with the file path
+    JOptionPane.showMessageDialog(null, "PDF generated: " + dest);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -358,6 +370,7 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel barPanel;
     private javax.swing.JLabel dashboardLabel;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
