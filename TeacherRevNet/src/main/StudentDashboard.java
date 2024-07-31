@@ -1,5 +1,6 @@
 package main;
 
+import dao.DatabaseConnection;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.util.ArrayList;
@@ -11,9 +12,12 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PiePlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.general.DefaultPieDataset;
+import java.sql.*;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -34,8 +38,10 @@ public class StudentDashboard extends javax.swing.JFrame {
     public StudentDashboard() {
         initComponents();
         showBarChart();
+        showPieChart();
         initializeQuotes();
         displayRandomQuote();
+        
     }
 
     private void displayRandomQuote() {
@@ -53,14 +59,14 @@ public class StudentDashboard extends javax.swing.JFrame {
         quotes.add("“Education is not preparation for life; education is life itself.” —John Dewey");
         random = new Random();
     }
-
+        
     public void showBarChart() {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         dataset.setValue(1.5, "Rating", "Aashish Khanal");
-        dataset.setValue(3.2, "Rating", "Ms. Johnson");
-        dataset.setValue(2.8, "Rating", "Mr. Williams");
-        dataset.setValue(4.0, "Rating", "Ms. Brown");
-        dataset.setValue(3.3, "Rating", "Mr. Jones");
+        dataset.setValue(3.2, "Rating", "Hari Chapagain");
+        dataset.setValue(2.8, "Rating", "Isha Rai");
+        dataset.setValue(4.0, "Rating", "Lebron Shrestha");
+        dataset.setValue(3.3, "Rating", "Bimal Pakhrin");
 
         JFreeChart chart = ChartFactory.createBarChart(
                 "Top Teacher Ratings",
@@ -83,6 +89,37 @@ public class StudentDashboard extends javax.swing.JFrame {
         this.barPanel.validate();
     }
 
+    public void showPieChart(){
+        
+        //create dataset
+      DefaultPieDataset barDataset = new DefaultPieDataset( );
+//      barDataset.setValue( "inCompleted" , 3 );  
+//      barDataset.setValue( "inRemaining" ,  8 );   
+      barDataset.setValue( "Completed" ,  3  );    
+      barDataset.setValue( "Remaining" , 7 );  
+      
+      //create chart
+       JFreeChart piechart = ChartFactory.createPieChart("Pending Questions",barDataset, false,true,false);//explain
+      
+        PiePlot piePlot =(PiePlot) piechart.getPlot();
+      
+       //changing pie chart blocks colors
+//       piePlot.setSectionPaint("inCompleted ", new Color(0,0,0));
+//        piePlot.setSectionPaint("inRemaining ", new Color(246,138,30));//orange
+        piePlot.setSectionPaint("Completed", new Color(30,63,138));//BLue
+        piePlot.setSectionPaint("Remaning", new Color(246,138,30));
+      
+       
+        piePlot.setBackgroundPaint(Color.white);
+        
+        
+        //create chartPanel to display chart(graph)
+        ChartPanel barChartPanel = new ChartPanel(piechart);
+        piechartPanel.removeAll();
+        piechartPanel.add(barChartPanel, BorderLayout.CENTER);
+        piechartPanel.validate();
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -104,13 +141,14 @@ public class StudentDashboard extends javax.swing.JFrame {
         dashboardLabel = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         barPanel = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        piechartPanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         quotePanel = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1250, 800));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(217, 217, 217));
@@ -193,9 +231,9 @@ public class StudentDashboard extends javax.swing.JFrame {
         barPanel.setLayout(new java.awt.BorderLayout());
         jPanel3.add(barPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 500, 340));
 
-        jPanel5.setBackground(new java.awt.Color(209, 232, 254));
-        jPanel5.setLayout(new java.awt.BorderLayout());
-        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 120, 330, 340));
+        piechartPanel.setBackground(new java.awt.Color(209, 232, 254));
+        piechartPanel.setLayout(new java.awt.BorderLayout());
+        jPanel3.add(piechartPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, 420, 340));
 
         jLabel3.setFont(new java.awt.Font("Poppins SemiBold", 1, 48)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
@@ -213,11 +251,11 @@ public class StudentDashboard extends javax.swing.JFrame {
         jLabel5.setText("Daily Motivation");
         quotePanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 690, 50));
 
-        jPanel3.add(quotePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 870, 160));
+        jPanel3.add(quotePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 930, 160));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 940, 800));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 970, 800));
 
-        setSize(new java.awt.Dimension(1214, 807));
+        setSize(new java.awt.Dimension(1247, 807));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -299,9 +337,9 @@ public class StudentDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JLabel logoutLabel;
+    private javax.swing.JPanel piechartPanel;
     private javax.swing.JLabel qaLabel;
     private javax.swing.JPanel quotePanel;
     private javax.swing.JLabel settingLabel;
