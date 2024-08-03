@@ -365,6 +365,8 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     private void settingLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabel1MouseClicked
         // TODO add your handling code here:
+        new ViewUser().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_settingLabel1MouseClicked
 
     /**

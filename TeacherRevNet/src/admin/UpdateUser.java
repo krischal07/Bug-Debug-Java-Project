@@ -270,16 +270,20 @@ public class UpdateUser extends javax.swing.JFrame {
 
     private void settingLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabelMouseClicked
         // TODO add your handling code here:
-        new ViewUser().setVisible(true);
-        this.dispose();
+//        new ViewUser().setVisible(true);
+//        this.dispose();
     }//GEN-LAST:event_settingLabelMouseClicked
 
     private void dashboardLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardLabelMouseClicked
         // TODO add your handling code here:
+        new AdminDashboard().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_dashboardLabelMouseClicked
 
     private void settingLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabel1MouseClicked
         // TODO add your handling code here:
+        new ViewUser().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_settingLabel1MouseClicked
 
     private void comboUserRoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboUserRoleActionPerformed
