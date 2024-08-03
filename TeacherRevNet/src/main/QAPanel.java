@@ -49,27 +49,21 @@ public class QAPanel extends javax.swing.JFrame {
         teacher6 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         teacher4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         teacher5 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         teacher1 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         teacher2 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         teacher3 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -162,11 +156,8 @@ public class QAPanel extends javax.swing.JFrame {
         jLabel25.setBackground(new java.awt.Color(246, 138, 30));
         jLabel25.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(30, 63, 138));
-        jLabel25.setText("(4.9)Lebron Shrestha");
+        jLabel25.setText("Lebron Shrestha");
         teacher6.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 180, 20));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/star24px.png"))); // NOI18N
-        teacher6.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, 30));
 
         jPanel3.add(teacher6, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 450, 220, 250));
 
@@ -184,11 +175,8 @@ public class QAPanel extends javax.swing.JFrame {
         jLabel23.setBackground(new java.awt.Color(246, 138, 30));
         jLabel23.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(30, 63, 138));
-        jLabel23.setText("(4.5) Hari Chapagain");
+        jLabel23.setText("Hari Chapagain");
         teacher4.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 190, 20));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/star24px.png"))); // NOI18N
-        teacher4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, 30));
 
         jPanel3.add(teacher4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 220, 250));
 
@@ -206,11 +194,8 @@ public class QAPanel extends javax.swing.JFrame {
         jLabel24.setBackground(new java.awt.Color(246, 138, 30));
         jLabel24.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(30, 63, 138));
-        jLabel24.setText("(4.8)Bimal Pakhrin");
+        jLabel24.setText("Bimal Pakhrin");
         teacher5.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 200, 20));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/star24px.png"))); // NOI18N
-        teacher5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, 30));
 
         jPanel3.add(teacher5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 220, 250));
 
@@ -228,11 +213,8 @@ public class QAPanel extends javax.swing.JFrame {
         jLabel16.setBackground(new java.awt.Color(246, 138, 30));
         jLabel16.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(30, 63, 138));
-        jLabel16.setText("(4.6) Riya Sharma");
+        jLabel16.setText("Riya Sharma");
         teacher1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 208, 180, 40));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/star24px.png"))); // NOI18N
-        teacher1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, 30));
 
         jPanel3.add(teacher1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 220, 250));
 
@@ -250,11 +232,8 @@ public class QAPanel extends javax.swing.JFrame {
         jLabel21.setBackground(new java.awt.Color(246, 138, 30));
         jLabel21.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(30, 63, 138));
-        jLabel21.setText("(4.7) Isha Rai");
+        jLabel21.setText("Isha Rai");
         teacher2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 208, 150, 40));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/star24px.png"))); // NOI18N
-        teacher2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, 30));
 
         jPanel3.add(teacher2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 220, 250));
 
@@ -272,11 +251,8 @@ public class QAPanel extends javax.swing.JFrame {
         jLabel22.setBackground(new java.awt.Color(246, 138, 30));
         jLabel22.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(30, 63, 138));
-        jLabel22.setText("(4.3) Ram Kumar");
+        jLabel22.setText("Ram Kumar");
         teacher3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 190, 20));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/star24px.png"))); // NOI18N
-        teacher3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, 30));
 
         jPanel3.add(teacher3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 110, 220, 250));
 
@@ -381,7 +357,6 @@ public class QAPanel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -393,13 +368,8 @@ public class QAPanel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

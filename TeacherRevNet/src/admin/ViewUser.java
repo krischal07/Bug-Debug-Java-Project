@@ -43,6 +43,11 @@ public class ViewUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel4 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         logoutLabel = new javax.swing.JLabel();
@@ -52,12 +57,8 @@ public class ViewUser extends javax.swing.JFrame {
         qaLabel = new javax.swing.JLabel();
         settingLabel = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
+        settingLabel1 = new javax.swing.JLabel();
         dashboardLabel = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -66,72 +67,6 @@ public class ViewUser extends javax.swing.JFrame {
             }
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
-        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/kist 1.png"))); // NOI18N
-        jLabel10.setText("Logo");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
-
-        logoutLabel.setBackground(new java.awt.Color(0, 0, 0));
-        logoutLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        logoutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/log-out.png"))); // NOI18N
-        logoutLabel.setText("  Logout");
-        logoutLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                logoutLabelMouseClicked(evt);
-            }
-        });
-        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 180, 40));
-
-        jPanel2.setBackground(new java.awt.Color(194, 194, 194));
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/profile-user.png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 70, 70));
-
-        jLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 25)); // NOI18N
-        jLabel1.setText("Admin");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 100, -1));
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 270));
-
-        qaLabel.setBackground(new java.awt.Color(0, 0, 0));
-        qaLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        qaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/adduser32.png"))); // NOI18N
-        qaLabel.setText("Add User");
-        qaLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                qaLabelMouseClicked(evt);
-            }
-        });
-        jPanel1.add(qaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 170, 60));
-
-        settingLabel.setBackground(new java.awt.Color(0, 0, 0));
-        settingLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/viewuser.png"))); // NOI18N
-        settingLabel.setText("View User");
-        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 180, 40));
-
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel6.setLayout(null);
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, 230, 50));
-
-        dashboardLabel.setBackground(new java.awt.Color(0, 0, 0));
-        dashboardLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        dashboardLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/dashboard.png"))); // NOI18N
-        dashboardLabel.setText("  Dashboard");
-        dashboardLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dashboardLabelMouseClicked(evt);
-            }
-        });
-        jPanel1.add(dashboardLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 180, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 800));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -147,7 +82,7 @@ public class ViewUser extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Role", "Mobile Number", "Email", "User Name", "Password", "Address"
+                "ID", "Name", "Role", "Mobile Number", "Email", "User Name", "Password", "Address", "Facualty"
             }
         ));
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -166,20 +101,92 @@ public class ViewUser extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 940, 800));
 
+        jPanel1.setBackground(new java.awt.Color(217, 217, 217));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/kist 1.png"))); // NOI18N
+        jLabel10.setText("Logo");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
+
+        logoutLabel.setBackground(new java.awt.Color(0, 0, 0));
+        logoutLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        logoutLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/log-out.png"))); // NOI18N
+        logoutLabel.setText("  Logout");
+        logoutLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 630, 180, 40));
+
+        jPanel2.setBackground(new java.awt.Color(194, 194, 194));
+        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/profile-user.png"))); // NOI18N
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 70, 70));
+
+        jLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 25)); // NOI18N
+        jLabel1.setText("Admin");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 100, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 270));
+
+        qaLabel.setBackground(new java.awt.Color(0, 0, 0));
+        qaLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        qaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/adduser32.png"))); // NOI18N
+        qaLabel.setText("  Add User");
+        qaLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                qaLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(qaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 170, 60));
+
+        settingLabel.setBackground(new java.awt.Color(0, 0, 0));
+        settingLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/updateuser32.png"))); // NOI18N
+        settingLabel.setText("  Update User");
+        settingLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                settingLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, 180, 40));
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setLayout(null);
+
+        settingLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        settingLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        settingLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/viewuser.png"))); // NOI18N
+        settingLabel1.setText("  View User");
+        settingLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                settingLabel1MouseClicked(evt);
+            }
+        });
+        jPanel6.add(settingLabel1);
+        settingLabel1.setBounds(10, 0, 180, 40);
+
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 230, 50));
+
+        dashboardLabel.setBackground(new java.awt.Color(0, 0, 0));
+        dashboardLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        dashboardLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/dashboard.png"))); // NOI18N
+        dashboardLabel.setText("  Dashboard");
+        dashboardLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dashboardLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(dashboardLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 180, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 800));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void qaLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_qaLabelMouseClicked
-        // TODO add your handling code here:
-        new AddUser().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_qaLabelMouseClicked
-
-    private void dashboardLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardLabelMouseClicked
-        // TODO add your handling code here:
-        new AdminDashboard().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_dashboardLabelMouseClicked
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
@@ -218,7 +225,7 @@ int index = jTable1.getSelectedRow();
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery("Select * from appuser");
             while(rs.next()){
-                model.addRow(new Object[]{rs.getString("appuser_pk"), rs.getString("name"), rs.getString("userRole"), rs.getString("mobileNumber"), rs.getString("email"), rs.getString("username"), rs.getString("password"), rs.getString("address")});
+                model.addRow(new Object[]{rs.getString("appuser_pk"), rs.getString("name"), rs.getString("userRole"), rs.getString("mobileNumber"), rs.getString("email"), rs.getString("username"), rs.getString("password"), rs.getString("address"), rs.getString("facualty")});
             }
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
@@ -227,12 +234,34 @@ int index = jTable1.getSelectedRow();
 
     private void logoutLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutLabelMouseClicked
         // TODO add your handling code here:
-           int a = JOptionPane.showConfirmDialog(null, "Do you want to Logout?","Select",JOptionPane.YES_NO_OPTION);
-     if(a==0){
-         new Login().setVisible(true);
-         this.dispose();
-     }
+        int a = JOptionPane.showConfirmDialog(null, "Do you want to Logout?", "Select", JOptionPane.YES_NO_OPTION);
+        if (a == 0) {
+            new Login().setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_logoutLabelMouseClicked
+
+    private void qaLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_qaLabelMouseClicked
+        // TODO add your handling code here:
+        new AddUser().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_qaLabelMouseClicked
+
+    private void settingLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabelMouseClicked
+        // TODO add your handling code here:
+                new UpdateUser().setVisible(true);
+                this.dispose();
+    }//GEN-LAST:event_settingLabelMouseClicked
+
+    private void settingLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabel1MouseClicked
+        // TODO add your handling code here:
+        new ViewUser().setVisible(true);
+    }//GEN-LAST:event_settingLabel1MouseClicked
+
+    private void dashboardLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardLabelMouseClicked
+        // TODO add your handling code here:
+        new AdminDashboard().setVisible(true);
+    }//GEN-LAST:event_dashboardLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -285,5 +314,6 @@ int index = jTable1.getSelectedRow();
     private javax.swing.JLabel logoutLabel;
     private javax.swing.JLabel qaLabel;
     private javax.swing.JLabel settingLabel;
+    private javax.swing.JLabel settingLabel1;
     // End of variables declaration//GEN-END:variables
 }

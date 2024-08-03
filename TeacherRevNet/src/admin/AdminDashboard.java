@@ -102,6 +102,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         settingLabel = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         dashboardLabel = new javax.swing.JLabel();
+        settingLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         barPanel = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -139,7 +140,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                 logoutLabelMouseClicked(evt);
             }
         });
-        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 180, 40));
+        jPanel1.add(logoutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, 180, 40));
 
         jPanel2.setBackground(new java.awt.Color(194, 194, 194));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -157,7 +158,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         qaLabel.setBackground(new java.awt.Color(0, 0, 0));
         qaLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         qaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/adduser32.png"))); // NOI18N
-        qaLabel.setText("Add User");
+        qaLabel.setText("  Add User");
         qaLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 qaLabelMouseClicked(evt);
@@ -167,14 +168,14 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         settingLabel.setBackground(new java.awt.Color(0, 0, 0));
         settingLabel.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/viewuser.png"))); // NOI18N
-        settingLabel.setText("View User");
+        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/updateuser32.png"))); // NOI18N
+        settingLabel.setText("  Update User");
         settingLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 settingLabelMouseClicked(evt);
             }
         });
-        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 180, 40));
+        jPanel1.add(settingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 180, 40));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(null);
@@ -192,6 +193,17 @@ public class AdminDashboard extends javax.swing.JFrame {
         dashboardLabel.setBounds(10, 10, 180, 30);
 
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 230, 50));
+
+        settingLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        settingLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        settingLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/viewuser.png"))); // NOI18N
+        settingLabel1.setText("  View User");
+        settingLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                settingLabel1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(settingLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 180, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 800));
 
@@ -323,7 +335,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     private void settingLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabelMouseClicked
         // TODO add your handling code here:
-        new ViewUser().setVisible(true);
+        new UpdateUser().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_settingLabelMouseClicked
 
@@ -350,6 +362,12 @@ public class AdminDashboard extends javax.swing.JFrame {
          this.dispose();
      }
     }//GEN-LAST:event_logoutLabelMouseClicked
+
+    private void settingLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabel1MouseClicked
+        // TODO add your handling code here:
+        new ViewUser().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_settingLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -421,5 +439,6 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel quotePanel1;
     private javax.swing.JPanel quotePanel2;
     private javax.swing.JLabel settingLabel;
+    private javax.swing.JLabel settingLabel1;
     // End of variables declaration//GEN-END:variables
 }
